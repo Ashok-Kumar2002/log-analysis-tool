@@ -7,7 +7,7 @@ failed_logins = 0
 successful_logins = 0
 invalid_users = []
 
-# Go through each line of the log
+# Goes through each line of the log
 for line in log_lines:
     if "Failed password" in line:
         failed_logins += 1
@@ -22,7 +22,7 @@ for line in log_lines:
     elif "Accepted password" in line:
         successful_logins += 1
 
-# Print basic summary
+# Print basic summary of it
 print("===== Log Analysis Report =====")
 print(f"Failed login attempts: {failed_logins}")
 print(f"Successful logins: {successful_logins}")
